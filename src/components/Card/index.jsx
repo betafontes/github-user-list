@@ -1,4 +1,5 @@
 import styles from "./Card.module.css"
+
 export function Card({ username, description, image, route }) {
   return (
     <a href={route}>
@@ -15,3 +16,7 @@ export function Card({ username, description, image, route }) {
     </a>
   )
 }
+
+
+
+

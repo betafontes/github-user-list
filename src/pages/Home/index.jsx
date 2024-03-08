@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Card } from "../../components/Card"
 import styles from "./Home.module.css"
+import Link from 'your-link-library';
+
 import axios from "axios"
 export function Home() {
   const [user, setUser] = useState("")
@@ -29,12 +31,14 @@ export function Home() {
       </div>
       <div>
         {listUser && (
-          <Card
-            image={listUser.avatar_url}
-            username={listUser.login}
-            description={listUser.bio}
-            route={`/profile/${listUser.login}`}
-          />
+          <Link>
+            <Card
+              image={listUser.avatar_url}
+              username={listUser.login}
+              description={listUser.bio}
+              route={`/profile/${listUser.login}`}
+            />
+          </Link>
         )}
       </div>
     </>
